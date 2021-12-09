@@ -28,9 +28,6 @@ require('./config/passport')(passport);
 
 app.use('/users', users);
 
-app.get('/', function (req, res) {
-    res.send('않이 이게 무슨');
-});
 
 mongoose.connect(config.db);
 mongoose.connection.on('connected', function () {
