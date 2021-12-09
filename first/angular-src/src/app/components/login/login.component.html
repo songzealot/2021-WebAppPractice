@@ -1,0 +1,47 @@
+<h2 class="page-header text-center">로그인</h2>
+<br>
+<div class="row text-center">
+    <div class="col-md-6">
+        <div class="card bg-light">
+            <div class="card-body">
+                <form (ngSubmit)="onLoginSubmit()">
+                    <div class="form-group">
+                        <label for="exampleInputEmail">아이디(Username)</label>
+                        <input type="text" id="exampleInputEmail" class="form-control" [(ngModel)]="username"
+                            [ngModelOptions]="{ standalone: true }">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword">패스워드</label>
+                        <input type="password" class="form-control" id="exampleInputPassword" [(ngModel)]="password"
+                            [ngModelOptions]="{ standalone: true }">
+                    </div>
+                    <br>
+                    <input type="submit" class="btn btn-primary" value="로그인">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card text-white bg-dark">
+            <div class="card-body">
+                <form (ngSubmit)="onLoginSignSubmit()">
+                    <h5 class="card-title">전자 서명 로그인</h5>
+                    <p class="card-text">브라우저에 인증서를 아직 가지고 있다면?</p>
+                    <br>
+                    <input type="submit" class="btn btn-secondary" value="전자서명으로 로그인">
+                </form>
+            </div>
+        </div>
+        <br>
+        <div class="card bg-warning">
+            <div class="card-body">
+                <form (ngSubmit)="onQRLoginSignSubmit()">
+                    <h5 class="card-title">QR코드 로그인</h5>
+                    <p class="card-text">QR코드로 로그인!</p>
+                    <br>
+                    <input type="submit" class="btn btn-danger" value="QR코드로 로그인">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
