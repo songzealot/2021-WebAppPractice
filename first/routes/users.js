@@ -225,7 +225,7 @@ router.post("/cert", (req, res, next) => {
         }
     });
 });
-
+// 인증서 로그인
 router.post("/authenticateSign", (req, res, next) => {
     const username = req.body.username;
     User.getUserByUsername(username, (err, user) => {
@@ -257,7 +257,8 @@ router.post("/authenticateSign", (req, res, next) => {
             let verified2 = caCert.verify(cert);
             // Time verification. Anti-replay attack
             let verified3 = false;
-            if (diffTime < 5000) verified3 = true;
+            // 유효시간
+            if (diffTime < 60000) verified3 = true;
             // Verify username
             let verified4 = false;
             if (username == common) verified4 = true;

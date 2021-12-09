@@ -1,27 +1,33 @@
-<h2 class="page-header">사용자 등록</h2>
-<form (ngSubmit)="onRegisterSubmit()">
-    <div class="mb-3">
-        <label for="inputName" class="form-label"> 사용자 이름</label>
-        <input type="text" [(ngModel)]="name" [ngModelOptions]="{ standalone: true }" class="form-control"
-            id="inputName" required>
-        <div class="mb-3">
-            <label for="InputEmail" class="form-label"> 사용자 이메일</label>
-            <input type="email" [(ngModel)]="email" [ngModelOptions]="{ standalone: true }" class="form-control"
-                id="InputEmail" required>
-        </div>
+<div>
+    <h2 class="page-header">사용자 등록</h2>
+    <br>
+    <form (ngSubmit)="onRegisterSubmit()">
         <div class="mb-3">
             <label for="InputId" class="form-label"> 아이디</label>
             <input type="text" [(ngModel)]="username" [ngModelOptions]="{ standalone: true }" class="form-control"
-                id="InputId" required>
+                id="InputId" required />
         </div>
         <div class="mb-3">
             <label for="InputPw" class="form-label"> 비밀번호</label>
             <input type="password" [(ngModel)]="password" [ngModelOptions]="{ standalone: true }" class="form-control"
-                id="InputPw" required>
+                id="InputPw" required />
         </div>
         <div class="mb-3">
             <label for="InputPwchk" class="form-label"> 비밀번호 확인</label>
             <input type="password" [(ngModel)]="pwchk" [ngModelOptions]="{ standalone: true }" class="form-control"
-                id="InputPwchk" required>
+                id="InputPwchk" required />
         </div>
-        <input type="submit" class="btn btn-primary" value="사용자 등록">
+        <div class="mb-3">
+            <label for="inputName" class="form-label"> 사용자 이름</label>
+            <input type="text" [(ngModel)]="name" [ngModelOptions]="{ standalone: true }" class="form-control"
+                id="inputName" required />
+        </div>
+        <div class="mb-3">
+            <label for="InputEmail" class="form-label"> 사용자 이메일</label>
+            <input type="email" [(ngModel)]="email" [ngModelOptions]="{ standalone: true }" class="form-control"
+                id="InputEmail" required />
+        </div>
+        <br>
+        <input type="submit" class="btn btn-primary" value="사용자 등록" />
+    </form>
+</div>

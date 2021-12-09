@@ -1,22 +1,27 @@
-<div *ngIf="name">
+<div *ngIf="name" class="container">
     <h2 class="page-header">사용자 이름:{{name}}</h2>
+    <br>
     <form>
         <div class="form-group">
             <label for="userInfo">사용자 정보</label>
             <textarea class="form-control" id="userInfo" rows="1" disabled>{{userString}}</textarea>
         </div>
+        <br>
         <div class="form-group">
             <label for="tokenInfo">토큰</label>
             <textarea class="form-control" id="tokenInfo" rows="4" disabled>{{token}}</textarea>
         </div>
+        <br>
         <div class="form-group">
             <label for="tokenInfo">개인키</label>
             <textarea class="form-control" id="tokenInfo" rows="4" disabled>{{privateKey}}</textarea>
         </div>
+        <br>
         <div class="form-group">
             <label for="tokenInfo">인증서</label>
             <textarea class="form-control" id="tokenInfo" rows="4" disabled>{{cert}}</textarea>
         </div>
+        <br>
         <div class="form-group">
             <label for="tokenInfo">CA 인증서</label>
             <textarea class="form-control" id="tokenInfo" rows="4" disabled>{{caCert}}</textarea>

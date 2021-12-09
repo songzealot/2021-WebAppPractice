@@ -23,6 +23,7 @@ import { CertComponent } from './components/cert/cert.component';
 import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
 import { QrgenComponent } from './components/qrgen/qrgen.component';
 import { QrloginComponent } from './components/qrlogin/qrlogin.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,9 @@ import { QrloginComponent } from './components/qrlogin/qrlogin.component';
         }
       }
     }),
-    NgxQRCodeModule
+    NgxQRCodeModule,
+    BrowserAnimationsModule
+
   ],
   providers: [ValidateService, FlashMessagesService, AuthService, AuthGuard],
   bootstrap: [AppComponent]

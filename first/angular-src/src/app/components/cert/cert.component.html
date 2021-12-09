@@ -1,9 +1,9 @@
 <h2 class="page-header">인증서 발급 (Certificate Request) - {{ common }}</h2>
+<br>
 <form (ngSubmit)="onCertRequest()">
     <div class="mb-3">
         <label class="form-label">
-            이름(Common Name) - 현 사용자의 ID를 자동으로 이용하며 사용자가 바꿀 수
-            없습니다.
+            이름(Common Name)
         </label>
         <input type="text" [(ngModel)]="common" name="common" class="form-control" disabled>
     </div>

@@ -26,7 +26,7 @@
             <div class="card-body">
                 <form (ngSubmit)="onLoginSignSubmit()">
                     <h5 class="card-title">전자 서명 로그인</h5>
-                    <p class="card-text">브라우저에 인증서를 아직 가지고 있다면?</p>
+                    <p class="card-text">브라우저에 인증서를 가지고 있다면?</p>
                     <br>
                     <input type="submit" class="btn btn-secondary" value="전자서명으로 로그인">
                 </form>
@@ -37,7 +37,10 @@
             <div class="card-body">
                 <form (ngSubmit)="onQRLoginSignSubmit()">
                     <h5 class="card-title">QR코드 로그인</h5>
-                    <p class="card-text">QR코드로 로그인!</p>
+                    <p class="card-text">
+                        다른 기기에서 생성한 QR코드로 로그인<br>
+                        QR코드 유효시간: 60초
+                    </p>
                     <br>
                     <input type="submit" class="btn btn-danger" value="QR코드로 로그인">
                 </form>
