@@ -28,7 +28,7 @@ export class AuthService {
 
   prepEndPoint(ep) {
     // 로컬 개발
-    // return 'http://localhost:3000/' + ep;
+    //return 'http://localhost:3000/' + ep;
     // 서버 배포
     return ep;
   }
